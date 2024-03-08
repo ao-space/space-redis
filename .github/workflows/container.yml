@@ -137,12 +137,6 @@ jobs:
           registry: ${{ env.HUAWEICLOUD_REGISTRY_LA }}
           username: la-north-2@${{ secrets.HUAWEICLOUD_USERNAME }}
           password: ${{ secrets.HUAWEICLOUD_PASSWORD }}    
-      - name: Extract Docker metadata
-        id: meta
-        uses: docker/metadata-action@v2
-        with:
-          images: |
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
 
       - name: Extract Docker metadata
         id: meta
